@@ -68,7 +68,7 @@ INLINE void double_elements_bench(benchmark::State& state)
   auto v = data();
 
   for (auto _ : state) {
-    std::transform(v.begin(), v.end(), v.begin(), [](auto x) { return x + x; });
+    for (T& x : v) x = x + x;
     benchmark::DoNotOptimize(v.data());
   }
 }
