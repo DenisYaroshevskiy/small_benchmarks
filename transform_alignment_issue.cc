@@ -23,6 +23,23 @@ double_elements_0       64.6 ns         64.6 ns     10867663
 double_elements_1       64.5 ns         64.5 ns     10855206
 double_elements_2       64.5 ns         64.5 ns     10868602
 
+
+==============
+If I increase the size to  100'000 / sizeof(T) then
+
+------------------------------------------------------------
+Benchmark                  Time             CPU   Iterations
+------------------------------------------------------------
+double_elements_0       1073 ns         1073 ns       651407
+double_elements_1       1078 ns         1078 ns       654136
+
+------------------------------------------------------------
+Benchmark                  Time             CPU   Iterations
+------------------------------------------------------------
+double_elements_0       1369 ns         1369 ns       492165
+double_elements_1       1358 ns         1358 ns       515861
+double_elements_2       1357 ns         1357 ns       514764
+
 */
 
 #include <benchmark/benchmark.h>
